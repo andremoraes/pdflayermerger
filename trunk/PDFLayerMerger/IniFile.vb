@@ -211,6 +211,7 @@ Public Class IniFile
                 Return False 'the key to insert prior to was not found
             End If
         End If
+        Return True
     End Function
 
     Private Function GetKeyIndex(ByVal KeyName As String, ByVal SectionName As String) As Integer
@@ -372,6 +373,7 @@ Public Class IniFile
         Dim ThisKey As Key = GetKey(KeyName, SectionName)
         If ThisKey Is Nothing Then Return False
         ThisKey.IsCommented = True
+        Return True
     End Function
 
     ''' -----------------------------------------------------------------------------
@@ -392,6 +394,7 @@ Public Class IniFile
         Dim ThisKey As Key = GetKey(KeyName, SectionName)
         If ThisKey Is Nothing Then Return False
         ThisKey.IsCommented = False
+        Return True
     End Function
 
     ''' -----------------------------------------------------------------------------

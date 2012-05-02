@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.lblOriginal = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -75,7 +76,6 @@ Partial Class frmMain
         Me.txtOriginal.Name = "txtOriginal"
         Me.txtOriginal.Size = New System.Drawing.Size(352, 20)
         Me.txtOriginal.TabIndex = 6
-        Me.txtOriginal.Text = "C:\Documents and Settings\reyniea\Desktop\CBR-2255 CB-23136.pdf"
         '
         'TextBox2
         '
@@ -85,7 +85,6 @@ Partial Class frmMain
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(352, 20)
         Me.TextBox2.TabIndex = 7
-        Me.TextBox2.Text = "C:\Documents and Settings\reyniea\Desktop\pmu_CBR-2255 CB-23136.pdf"
         '
         'TextBox3
         '
@@ -95,7 +94,6 @@ Partial Class frmMain
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(352, 20)
         Me.TextBox3.TabIndex = 8
-        Me.TextBox3.Text = "C:\Documents and Settings\reyniea\Desktop\test.pdf"
         '
         'OpenFileDialog1
         '
@@ -201,6 +199,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.lblOriginal)
         Me.Controls.Add(Me.GlassButton2)
         Me.Controls.Add(Me.GlassButton1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
         Me.Text = "PDF Layer Merger"
         Me.ResumeLayout(False)
